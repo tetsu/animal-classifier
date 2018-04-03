@@ -18,11 +18,10 @@ Classify animal photos.
     pip install flickrapi
     ```
 
-1. Pull this repository
+1. Clone this repository
 
     ```
-    git clone
-    git@github.com:tetsu/animal-classifier.git
+    git clone git@github.com:tetsu/animal-classifier.git
     ```
 
 1. create `config`, `monkey`, and `boar` folders
