@@ -4,11 +4,11 @@ from flickrapi import FlickrAPI
 from urllib.request import urlretrieve
 from pprint import pprint
 import os, time, sys
-from config import *
+from config import env
 
 #flickr API info
-key = FLICKR_KEY
-secret = FLICKR_SECRET
+key = env.FLICKR_KEY
+secret = env.FLICKR_SECRET
 waitTime = 0.5
 
 #image folders
