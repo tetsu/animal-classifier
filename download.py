@@ -6,8 +6,8 @@ from pprint import pprint
 import os, time, sys
 
 #flickr API info
-key = "6360b061367b98ceac053c516ea78ef5"
-secret = "f642d5f83066bb0b"
+key = ""
+secret = ""
 waitTime = 0.5
 
 #image folders
