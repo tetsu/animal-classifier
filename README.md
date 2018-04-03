@@ -1,2 +1,2 @@
-# animal_classification_deep_learning
+# Animal Classifier
 Classify animal photos.
