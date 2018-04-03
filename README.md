@@ -27,7 +27,7 @@ Classify animal photos.
 1. create `config`, `monkey`, and `boar` folders
 1. Create `env.py` under `config` folder with Flickr account. Type following data in `env.py`.
 
-    ```
+    ```python
     FLICKR_KEY = "{your flickr key}"
     FLICKR_SECRET = "{your flickr secret}"
     ```
