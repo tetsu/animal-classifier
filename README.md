@@ -1,5 +1,5 @@
 # Animal Classifier
-Classify animal photos.
+Classify animal photos by Deep Learning.
 
 ## How to Setup
 
