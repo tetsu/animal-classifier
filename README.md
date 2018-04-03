@@ -1,7 +1,7 @@
 # Animal Classifier
 Classify animal photos.
 
-# How to Setup
+## How to Setup
 
 1. Download Anaconda from [anaconda.com](https://www.anaconda.com/), and install it.
 1. Setup new python environment with Anacond-Navigator
