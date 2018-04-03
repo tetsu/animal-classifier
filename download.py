@@ -1,13 +1,14 @@
-# Download specified photo from Flickr 
+# Download specified photo from Flickr
 
 from flickrapi import FlickrAPI
 from urllib.request import urlretrieve
 from pprint import pprint
 import os, time, sys
+from config import *
 
 #flickr API info
-key = ""
-secret = ""
+key = FLICKR_KEY
+secret = FLICKR_SECRET
 waitTime = 0.5
 
 #image folders
