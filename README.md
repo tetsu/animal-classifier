@@ -24,14 +24,14 @@ Classify animal photos by Deep Learning.
     git clone git@github.com:tetsu/animal-classifier.git
     ```
 
-1. Create a [Flickr](https://www.flickr.com/) account, and enter Flickr Key and Secret in `env_sampke.py`, and rename the file to `env.py`.
+1. Create a [Flickr](https://www.flickr.com/) account, and enter Flickr Key and Secret in `config/env_sample.py`, and rename the file to `env.py`.
 
     ```python
     FLICKR_KEY = "{your flickr key}"
     FLICKR_SECRET = "{your flickr secret}"
     ```
 
-1. Download monkey images
+1. Download monkey images by typing following command in terminal.
 
     ```
     python download.py monkey
