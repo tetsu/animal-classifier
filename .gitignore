@@ -1,3 +1,4 @@
-config/
-monkey/
-boar/
+config/env.py
+monkey/*.jpg
+boar/*.jpg
+crow/*.jpg

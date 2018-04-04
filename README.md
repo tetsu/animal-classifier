@@ -24,8 +24,8 @@ Classify animal photos by Deep Learning.
     git clone git@github.com:tetsu/animal-classifier.git
     ```
 
-1. create `config`, `monkey`, and `boar` folders
-1. Create `env.py` under `config` folder with Flickr account. Type following data in `env.py`.
+1. Create `boar`, `monkey`, `crow` folders
+1. Create a [Flickr](https://www.flickr.com/) account, and enter Flickr Key and Secret in `env_sampke.py`, and rename the file to `env.py`.
 
     ```python
     FLICKR_KEY = "{your flickr key}"
