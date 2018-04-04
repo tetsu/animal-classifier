@@ -6,19 +6,19 @@ Classify animal photos by Deep Learning.
 1. Download Anaconda from [anaconda.com](https://www.anaconda.com/), and install it.
 1. Setup new python environment with Anacond-Navigator
 1. Open a terminal window, and do following installations
-1. Add TensorFlow:
+1. Add TensorFlow module to your Python environment by typing following command in terminal.
 
     ```
     pip install tensorflow
     ```
 
-1. Add FlickrAPI:
+1. Add FlickrAPI module to your Python environment by typing following command in terminal.
 
     ```
     pip install flickrapi
     ```
 
-1. Clone this repository
+1. Go to your working folder, and clone this repository by typing following command in terminal.
 
     ```
     git clone git@github.com:tetsu/animal-classifier.git
