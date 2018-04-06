@@ -18,6 +18,12 @@ Classify animal photos by Deep Learning.
     pip install flickrapi
     ```
 
+1. Add pillow module to your Python environment by typing following command in terminal.
+
+    ```
+    pip install pillow
+    ```
+
 1. Go to your working folder, and clone this repository by typing following command in terminal.
 
     ```
