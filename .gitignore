@@ -1,4 +1,8 @@
 config/env.py
-monkey/*.jpg
+config/__pycache__/
+boar/*.jpeg
 boar/*.jpg
+crow/*.jpeg
 crow/*.jpg
+monkey/*.jpeg
+monkey/*.jpg

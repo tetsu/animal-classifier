@@ -33,3 +33,5 @@ for i, photo in enumerate(photos['photo']):
     if os.path.exists(filepath): continue
     urlretrieve(url_q, filepath)
     time.sleep(waitTime)
+
+pprint('Download Completed.')
