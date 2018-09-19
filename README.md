@@ -1,5 +1,5 @@
-# Animal Classifier
-Classify animal photos by Deep Learning.
+# Keras Classifier
+Classify photos by Deep Learning using Keras and TensorFlow backend.
 
 ## How to Setup
 
