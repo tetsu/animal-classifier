@@ -28,12 +28,13 @@ result = flickr.photos.search(
 
 photos = result['photos']
 # pprint(photos)
-
+pprint('Downloading ' + image_title)
 for i, photo in enumerate(photos['photo']):
-    url_q = photo['url_q']
-    filepath = image_dir + '/' + photo['id'] + '.jpg'
-    if os.path.exists(filepath): continue
-    urlretrieve(url_q, filepath)
-    time.sleep(wait_time)
+    if 'url_q' in photo:
+        url_q = photo['url_q']
+        filepath = image_dir + '/' + photo['id'] + '.jpg'
+        if os.path.exists(filepath): continue
+        urlretrieve(url_q, filepath)
+        time.sleep(wait_time)
 
-pprint('Download Completed.')
+pprint(image_title + ' download completed.')
