@@ -13,7 +13,9 @@ wait_time = 0.5
 
 #image folders
 image_title = sys.argv[1]
-image_dir = "./" + image_title
+image_dir = "./images/" + image_title
+if not os.path.exists(image_dir):
+    os.makedirs(image_dir)
 flickr = FlickrAPI(key, secret, format='parsed-json')
 result = flickr.photos.search(
     text = image_title,

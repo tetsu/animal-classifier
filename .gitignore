@@ -1,15 +1,3 @@
 config/env.py
 config/__pycache__/
-boar/*.jpeg
-boar/*.jpg
-crow/*.jpeg
-crow/*.jpg
-monkey/*.jpeg
-monkey/*.jpg
-telecaster/*.jpeg
-telecaster/*.jpg
-stratocaster/*.jpeg
-stratocaster/*.jpg
-lespaul/*.jpeg
-lespaul/*.jpg
 .DS_Store
