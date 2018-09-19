@@ -13,7 +13,7 @@ wait_time = 0.5
 
 #image folders
 image_title = sys.argv[1]
-save_dir = "./" + image_title
+image_dir = "./" + image_title
 flickr = FlickrAPI(key, secret, format='parsed-json')
 result = flickr.photos.search(
     text = image_title,
@@ -29,7 +29,7 @@ photos = result['photos']
 
 for i, photo in enumerate(photos['photo']):
     url_q = photo['url_q']
-    filepath = save_dir + '/' + photo['id'] + '.jpg'
+    filepath = image_dir + '/' + photo['id'] + '.jpg'
     if os.path.exists(filepath): continue
     urlretrieve(url_q, filepath)
     time.sleep(wait_time)
