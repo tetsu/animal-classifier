@@ -9,14 +9,14 @@ from config import env
 #flickr API info
 key = env.FLICKR_KEY
 secret = env.FLICKR_SECRET
-waitTime = 0.5
+wait_time = 0.5
 
 #image folders
-animalName = sys.argv[1]
-saveDir = "./" + animalName
+image_title = sys.argv[1]
+save_dir = "./" + image_title
 flickr = FlickrAPI(key, secret, format='parsed-json')
 result = flickr.photos.search(
-    text = animalName,
+    text = image_title,
     per_page = 400,
     media = 'photos',
     sort = 'relevance',
@@ -29,9 +29,9 @@ photos = result['photos']
 
 for i, photo in enumerate(photos['photo']):
     url_q = photo['url_q']
-    filepath = saveDir + '/' + photo['id'] + '.jpg'
+    filepath = save_dir + '/' + photo['id'] + '.jpg'
     if os.path.exists(filepath): continue
     urlretrieve(url_q, filepath)
-    time.sleep(waitTime)
+    time.sleep(wait_time)
 
 pprint('Download Completed.')

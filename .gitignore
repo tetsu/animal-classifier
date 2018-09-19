@@ -6,3 +6,4 @@ crow/*.jpeg
 crow/*.jpg
 monkey/*.jpeg
 monkey/*.jpg
+.DS_Store
