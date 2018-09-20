@@ -21,6 +21,7 @@ def main():
     y_train = np_utils.to_categorical(y_train, num_classes)
     y_test = np_utils.to_categorical(y_test, num_classes)
 
+    print(x_train.shape[1:])
     model = model_train(x_train, y_train)
     model_eval(model, x_test, y_test)
 

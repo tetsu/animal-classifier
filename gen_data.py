@@ -26,6 +26,6 @@ for index, classlabel in enumerate(classes):
 x = np.array(x)
 y = np.array(y)
 
-x_train, x_test, x_train, x_test = model_selection.train_test_split(x, y)
-xy = (x_train, x_test, x_train, x_test)
+x_train, x_test, y_train, y_test = model_selection.train_test_split(x, y)
+xy = (x_train, x_test, y_train, y_test)
 np.save("./image.npy", xy)
