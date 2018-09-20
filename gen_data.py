@@ -1,11 +1,12 @@
 from PIL import Image
 import os, glob
 import numpy as np
-from sklearn import cross_validation
+from sklearn import model_selection
+from config import env
 
-classes = ["佐々木希", "新垣結衣", "石原さとみ"]
+classes = env.CLASSES
 num_classes = len(classes)
-image_size = 50
+image_size = env.IMAGE_SIZE
 
 #load images
 X = []
@@ -24,3 +25,7 @@ for index, classlabel in enumerate(classes):
 
 X = np.array(X)
 Y = np.array(Y)
+
+X_train, X_test, Y_train, Y_test = model_selection.train_test_split(X, Y)
+xy = (X_train, X_test, Y_train, Y_test)
+np.save("./image.npy", xy)
