@@ -29,22 +29,18 @@ for index, classlabel in enumerate(classes):
             x_test.append(data)
             y_test.append(index)
         else:
-            # Generate more images to increase the number of images to train
-            x_train.append(data)
-            y_train.append(index)
-
-            # Multiply images by rotating
             for angle in range(-20, 20, 5):
+                # Multiply images by rotating
                 img_r = image.rotate(angle)
                 data = np.asarray(img_r)
                 x_train.append(data)
                 y_train.append(index)
 
-            # Multipy images by transposing
-            img_trans = image.transpose(Image.FLIP_LEFT_RIGHT)
-            data = np.asarray(img_trans)
-            x_train.append(data)
-            y_train.append(index)
+                # Multipy images by transposing
+                img_trans = image.transpose(Image.FLIP_LEFT_RIGHT)
+                data = np.asarray(img_trans)
+                x_train.append(data)
+                y_train.append(index)
 
 
 x_train = np.array(x_train)
