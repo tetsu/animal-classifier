@@ -9,8 +9,8 @@ num_classes = len(classes)
 image_size = env.IMAGE_SIZE
 
 #load images
-X = []
-Y = []
+x = []
+y = []
 for index, classlabel in enumerate(classes):
     photo_dir = "./images/" + classlabel
     files = glob.glob(photo_dir + "/*.jpg")
@@ -20,12 +20,12 @@ for index, classlabel in enumerate(classes):
         image = image.convert("RGB")
         image = image.resize((image_size, image_size))
         data = np.asarray(image)
-        X.append(data)
-        Y.append(index)
+        x.append(data)
+        y.append(index)
 
-X = np.array(X)
-Y = np.array(Y)
+x = np.array(x)
+y = np.array(y)
 
-X_train, X_test, Y_train, Y_test = model_selection.train_test_split(X, Y)
-xy = (X_train, X_test, Y_train, Y_test)
+x_train, x_test, x_train, x_test = model_selection.train_test_split(x, y)
+xy = (x_train, x_test, x_train, x_test)
 np.save("./image.npy", xy)

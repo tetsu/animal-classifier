@@ -3,4 +3,5 @@ config/__pycache__/
 .DS_Store
 .ipynb_checkpoints
 *.ipynb
+*.h5
 image.npy

@@ -68,3 +68,15 @@ Classify photos by Deep Learning using Keras and TensorFlow backend.
     ```
 
 1. Remove images that are not proper for learning, such as unclear images, wrong images, images with other animals or breeds, etc.
+
+1. Convert images to NUMPY data to use on Keras by typing following command in terminal.
+
+    ```
+    python gen_data.py
+    ```
+
+1. Run model and evaluate by typing following command in terminal.
+
+    ```
+    python image_cnn.py
+    ```
