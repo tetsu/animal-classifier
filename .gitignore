@@ -4,4 +4,4 @@ config/__pycache__/
 .ipynb_checkpoints
 *.ipynb
 *.h5
-image.npy
+*.npy
