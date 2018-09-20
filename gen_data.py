@@ -15,7 +15,7 @@ for index, classlabel in enumerate(classes):
     photo_dir = "./images/" + classlabel
     files = glob.glob(photo_dir + "/*.jpg")
     for i, file in enumerate(files):
-        if i >= 100: break
+        if i >= 180: break
         image = Image.open(file)
         image = image.convert("RGB")
         image = image.resize((image_size, image_size))
