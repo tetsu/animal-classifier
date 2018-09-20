@@ -6,16 +6,18 @@ from pprint import pprint
 import os, time, sys
 from config import env
 
-#flickr API info
+# Flickr API info
 key = env.FLICKR_KEY
 secret = env.FLICKR_SECRET
 wait_time = 0.5
 
-#image folders
+# Assign or create an image folder
 image_title = sys.argv[1]
 image_dir = "./images/" + image_title
 if not os.path.exists(image_dir):
     os.makedirs(image_dir)
+
+# Flickr image search
 flickr = FlickrAPI(key, secret, format='parsed-json')
 result = flickr.photos.search(
     text = image_title,
@@ -26,8 +28,10 @@ result = flickr.photos.search(
     extras = 'url_q, license'
 )
 
+# Extract search result JSON
 photos = result['photos']
-# pprint(photos)
+
+# Download images
 pprint('Downloading ' + image_title)
 for i, photo in enumerate(photos['photo']):
     if 'url_q' in photo:
