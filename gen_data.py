@@ -3,7 +3,7 @@ import os, glob
 import numpy as np
 from sklearn import cross_validation
 
-classes = ["monkey", "boar", "crow"]
+classes = ["佐々木希", "新垣結衣", "石原さとみ"]
 num_classes = len(classes)
 image_size = 50
 
@@ -11,7 +11,7 @@ image_size = 50
 X = []
 Y = []
 for index, class in enumerate(classes):
-    photo_dir = "./" + class
+    photo_dir = "./images/" + class
     files = glob.glob(photo_dir + "/*.jpg")
     for i, file in enumerate(files):
         if i >= 100: break
