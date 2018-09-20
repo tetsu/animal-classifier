@@ -10,8 +10,8 @@ image_size = 50
 #load images
 X = []
 Y = []
-for index, class in enumerate(classes):
-    photo_dir = "./images/" + class
+for index, classlabel in enumerate(classes):
+    photo_dir = "./images/" + classlabel
     files = glob.glob(photo_dir + "/*.jpg")
     for i, file in enumerate(files):
         if i >= 100: break

@@ -24,6 +24,12 @@ Classify photos by Deep Learning using Keras and TensorFlow backend.
     pip install pillow
     ```
 
+1. Add Scikit-Learn module to your Python environment by typing following command in terminal.
+
+    ```
+    pip install sklearn
+    ```
+
 1. Go to your working folder, and clone this repository by typing following command in terminal.
 
     ```
