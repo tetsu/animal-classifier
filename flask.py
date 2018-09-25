@@ -3,7 +3,7 @@ from flask import Flask, flash, request, redirect, url_for, send_from_directory
 from werkzeug.utils import secure_filename
 from keras.models import load_model
 from PIL import Image
-import sys, keras
+import sys
 import numpy as np
 from config import env
 
