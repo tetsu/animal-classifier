@@ -97,5 +97,5 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
 
 1. Run Flask app by typing following command in terminal
     ```
-    FLASK_APP=flask.py flask run
+    FLASK_APP=index.py flask run
     ```
