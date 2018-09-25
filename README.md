@@ -55,6 +55,7 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
     FLICKR_SECRET = "{your flickr secret}"
     CLASSES = ["monkey", "boar", "crow"]
     IMAGE_SIZE = 50
+    NUMBER_OF_IMAGES = 400
     ```
 
 1. Go to the top folder of this project, and download images of assigned classes by typing following command in terminal.
