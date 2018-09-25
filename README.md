@@ -36,6 +36,12 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
     pip install keras
     ```
 
+1. Add Flask module to your Python environment by typing following command in terminal.
+
+    ```
+    pip install Flask 
+    ```
+
 1. Go to your working folder, and clone this repository by typing following command in terminal.
 
     ```
@@ -87,4 +93,9 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
 
     ```
     python predict.py {an image file path}
+    ```
+
+1. Run Flask app by typing following command in terminal
+    ```
+    FLASK_APP=index.py flask run
     ```
