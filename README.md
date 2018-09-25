@@ -75,7 +75,7 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
     python gen_data.py
     ```
 
-1. Run model and evaluate by typing following command in terminal.
+1. Train model, generate trained neural network h5 file, and evaluate the result by typing following command in terminal.
 
     ```
     python image_cnn.py
