@@ -12,15 +12,15 @@ secret = env.FLICKR_SECRET
 wait_time = 0.5
 
 # Assign or create an image folder
-image_title = sys.argv[1]
-image_dir = "./images/" + image_title
+image_class = sys.argv[1]
+image_dir = "./images/" + image_class
 if not os.path.exists(image_dir):
     os.makedirs(image_dir)
 
 # Flickr image search
 flickr = FlickrAPI(key, secret, format='parsed-json')
 result = flickr.photos.search(
-    text = image_title,
+    text = image_class,
     per_page = 400,
     media = 'photos',
     sort = 'relevance',
@@ -32,7 +32,7 @@ result = flickr.photos.search(
 photos = result['photos']
 
 # Download images
-pprint('Downloading ' + image_title)
+pprint('Downloading ' + image_class)
 for i, photo in enumerate(photos['photo']):
     if 'url_q' in photo:
         url_q = photo['url_q']
@@ -41,4 +41,4 @@ for i, photo in enumerate(photos['photo']):
         urlretrieve(url_q, filepath)
         time.sleep(wait_time)
 
-pprint(image_title + ' download completed.')
+pprint(image_class + ' download completed.')
