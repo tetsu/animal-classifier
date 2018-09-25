@@ -47,6 +47,8 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
     ```python
     FLICKR_KEY = "{your flickr key}"
     FLICKR_SECRET = "{your flickr secret}"
+    CLASSES = ["monkey", "boar", "crow"]
+    IMAGE_SIZE = 50
     ```
 
 1. Go to the top folder of this project, and download monkey images by typing following command in terminal.
