@@ -1,5 +1,5 @@
-# Keras Classifier
-Classify photos by Deep Learning using Keras and TensorFlow backend.
+# Keras Image Classifier
+Classify images by Deep Learning using Keras with TensorFlow backend.
 
 ## How to Setup
 
