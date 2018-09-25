@@ -30,6 +30,8 @@ def numpify_images():
     x_train, x_test, y_train, y_test = model_selection.train_test_split(x, y)
     xy = (x_train, x_test, y_train, y_test)
     np.save("./image.npy", xy)
+    print('Successfully converted images to NUMPY format.')
+    return True
 
 def main():
     numpify_images()
