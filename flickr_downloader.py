@@ -33,17 +33,20 @@ def main(image_class=sys.argv[1]):
     photos = result['photos']
 
     # Download images
-    pprint('Downloading ' + image_class)
+    print('Started downloading "' + image_class + '" images')
     for i, photo in enumerate(photos['photo']):
         if 'url_q' in photo:
-            print("Downloading " + str(i) + " of " + str(len(photos['photo'])))
+            if i % 10 == 0:
+                max_num = i+10 if i+10 < len(photos['photo']) else len(photos['photo'])
+                print("Downloading " + str(i) + " to " + str(max_num) \
+                    + " of " + str(len(photos['photo'])))
             url_q = photo['url_q']
             filepath = image_dir + '/' + photo['id'] + '.jpg'
             if os.path.exists(filepath): continue
             urlretrieve(url_q, filepath)
             time.sleep(wait_time)
 
-    pprint(image_class + ' download completed.')
+    print('Downloading "' + image_class + '" images completed.')
 
     return True
 
