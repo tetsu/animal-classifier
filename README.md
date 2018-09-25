@@ -48,13 +48,13 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
     python image_cnn.py
     ```
 
-1. Classify an image by typing following command in terminal.
+1. Classify an image file by typing following command in terminal.
 
     ```
     python predict.py {an image file path}
     ```
 
-1. Run Flask app by typing following command in terminal
+1. You can also classify an image file on a web page by typing following command in terminal, and check it on [web browser](http://127.0.0.1:5000/).
     ```
     FLASK_APP=index.py flask run
     ```
