@@ -82,3 +82,9 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
     ```
     python image_cnn.py
     ```
+
+1. Classify an image by typing following command in terminal.
+
+    ```
+    python predict.py {an image file path}
+    ```
