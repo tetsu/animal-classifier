@@ -20,7 +20,7 @@ def main(s=None):
     predicted = result.argmax()
     percentage = int(result[predicted] * 100)
     print("{0} ({1} %)".format(classes[predicted], percentage))
-    return True
+    return result
 
 def predict(filepath):
     image = Image.open(filepath)

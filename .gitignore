@@ -1,6 +1,7 @@
 config/env.py
 config/__pycache__/
 __pycache__/
+__pycache__/*
 .DS_Store
 .ipynb_checkpoints
 *.ipynb

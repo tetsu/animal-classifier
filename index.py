@@ -5,6 +5,7 @@ from keras.models import load_model
 from PIL import Image
 import sys
 import numpy as np
+from predict import predict
 from config import env
 
 classes = env.CLASSES
@@ -38,15 +39,7 @@ def upload_file():
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(filepath)
 
-            model = load_model('./image_cnn.h5')
-            image = Image.open(filepath)
-            image = image.convert('RGB')
-            image = image.resize((image_size, image_size))
-            data = np.asarray(image)
-            x = []
-            x.append(data)
-            x = np.array(x)
-            result = model.predict([x])[0]
+            result = predict(filepath)
             predicted = result.argmax()
             percentage = int(result[predicted] * 100)
             return "Label: " + classes[predicted] + ", Percentage: " + str(percentage) + "%"
