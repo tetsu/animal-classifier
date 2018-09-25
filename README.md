@@ -57,22 +57,10 @@ Classify images by Deep Learning using Keras with TensorFlow backend.
     IMAGE_SIZE = 50
     ```
 
-1. Go to the top folder of this project, and download monkey images by typing following command in terminal.
+1. Go to the top folder of this project, and download images of assigned classes by typing following command in terminal.
 
     ```
-    python download.py monkey
-    ```
-
-1. Download crow images by typing following command in terminal.
-
-    ```
-    python download.py crow
-    ```
-
-1. Download boar images by typing following command in terminal.
-
-    ```
-    python download.py boar
+    python download.py
     ```
 
 1. Remove images that are not proper for learning, such as unclear images, wrong images, images with other animals or breeds, etc.

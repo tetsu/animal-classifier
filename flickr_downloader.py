@@ -6,13 +6,16 @@ from pprint import pprint
 import os, time, sys
 from config import env
 
+# env data
+classes = env.CLASSES
+per_page = env.NUMBER_OF_IMAGES
+
 # Flickr API info
 key = env.FLICKR_KEY
 secret = env.FLICKR_SECRET
 wait_time = 0.5
-per_page = 400
 
-def main(image_class=sys.argv[1]):
+def downloader(image_class):
     # Assign or create an image folder
     image_dir = "./images/" + image_class
     if not os.path.exists(image_dir):
@@ -46,9 +49,16 @@ def main(image_class=sys.argv[1]):
             urlretrieve(url_q, filepath)
             time.sleep(wait_time)
 
-    print('Downloading "' + image_class + '" images completed.')
+    print('"' + image_class + '" images downloaded.')
 
     return True
+
+def main():
+    if len(sys.argv) >= 2:
+        downloader(sys.argv[1])
+    else:
+        for image_class in classes:
+            downloader(image_class)
 
 if __name__ == "__main__":
     main()
