@@ -16,11 +16,9 @@ def main(s=None):
         print("Please indicate image file path.")
         return False
 
-    result = predict(filepath)
-    predicted = result.argmax()
-    percentage = int(result[predicted] * 100)
+    predicted, percentage = predict(filepath)
     print("{0} ({1} %)".format(classes[predicted], percentage))
-    return result
+    return predicted, percentage
 
 def predict(filepath):
     image = Image.open(filepath)
@@ -32,7 +30,7 @@ def predict(filepath):
     model = load_model('./image_cnn.h5')
 
     result = model.predict([x])[0]
-    return result
+    return result.argmax(), int(result[result.argmax()] * 100)
 
 
 if __name__ == "__main__":

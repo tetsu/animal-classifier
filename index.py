@@ -39,9 +39,7 @@ def upload_file():
             filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
             file.save(filepath)
 
-            result = predict(filepath)
-            predicted = result.argmax()
-            percentage = int(result[predicted] * 100)
+            predicted, percentage = predict(filepath)
             return "Label: " + classes[predicted] + ", Percentage: " + str(percentage) + "%"
 
     return '''
