@@ -8,7 +8,7 @@ classes = env.CLASSES
 image_size = env.IMAGE_SIZE
 
 def main(s=None):
-    if s:
+    if s is not None:
         filepath = s
     elif len(sys.argv) >= 2:
         filepath = sys.argv[1]
