@@ -8,13 +8,13 @@ classes = env.CLASSES
 image_size = env.IMAGE_SIZE
 
 def main(s=None):
-    if s != None:
+    if s:
         filepath = s
     elif len(sys.argv) >= 2:
         filepath = sys.argv[1]
     else:
         print("Please indicate image file path.")
-        return False
+        return None
 
     predicted, percentage = predict(filepath)
     print("{0} ({1} %)".format(classes[predicted], percentage))
